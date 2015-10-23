@@ -1,0 +1,44 @@
+{
+  "name": "AdvertiseAdmob",
+  "version": "0.1.0",
+  "summary": "AdvertiseAdmob.",
+  "description": "AdvertiseAdmob..",
+  "homepage": "https://github.com/ietstudio/AdvertiseAdmob",
+  "license": "MIT",
+  "authors": {
+    "gaoyang": "geekgaoyang@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ietstudio/AdvertiseAdmob.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "AdvertiseAdmob": [
+      "Pod/Assets/*.png"
+    ]
+  },
+  "dependencies": {
+    "GamePluginBase": [
+
+    ]
+  },
+  "frameworks": [
+    "AdSupport",
+    "AudioToolbox",
+    "AVFoundation",
+    "CoreGraphics",
+    "CoreMedia",
+    "CoreTelephony",
+    "EventKit",
+    "EventKitUI",
+    "MessageUI",
+    "StoreKit",
+    "SystemConfiguration"
+  ],
+  "vendored_frameworks": "Pod/SDK/v752/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework"
+}

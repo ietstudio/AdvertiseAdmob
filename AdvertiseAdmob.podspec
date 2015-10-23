@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "AdvertiseAdmob"
   s.version          = "0.1.0"
-  s.summary          = "A short description of AdvertiseAdmob."
+  s.summary          = "AdvertiseAdmob."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,13 +17,14 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+  AdvertiseAdmob..
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/AdvertiseAdmob"
+  s.homepage         = "https://github.com/ietstudio/AdvertiseAdmob"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "gaoyang" => "geekgaoyang@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/AdvertiseAdmob.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/ietstudio/AdvertiseAdmob.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
@@ -37,4 +38,10 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+  s.dependency 'GamePluginBase'
+
+  s.frameworks = 'AdSupport', 'AudioToolbox', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreTelephony', 'EventKit', 'EventKitUI', 'MessageUI', 'StoreKit', 'SystemConfiguration'
+  s.vendored_frameworks = 'Pod/SDK/v752/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework'
+
 end

@@ -1,0 +1,35 @@
+PODS:
+  - AdvertiseAdmob (0.1.0):
+    - GamePluginBase
+  - Expecta (1.0.3)
+  - Expecta+Snapshots (2.0.0):
+    - Expecta (~> 1.0)
+    - FBSnapshotTestCase/Core (~> 2.0.3)
+  - FBSnapshotTestCase (2.0.5):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.5)
+  - FBSnapshotTestCase/Core (2.0.5)
+  - FBSnapshotTestCase/SwiftSupport (2.0.5):
+    - FBSnapshotTestCase/Core
+  - GamePluginBase (0.1.0)
+  - Specta (1.0.4)
+
+DEPENDENCIES:
+  - AdvertiseAdmob (from `../`)
+  - Expecta
+  - Expecta+Snapshots
+  - FBSnapshotTestCase
+  - Specta
+
+EXTERNAL SOURCES:
+  AdvertiseAdmob:
+    :path: ../
+
+SPEC CHECKSUMS:
+  AdvertiseAdmob: 06bcf4224d0f5420d1386d6308bb18f1309ddf8d
+  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
+  FBSnapshotTestCase: 6917deb01d0556dd544536f9eb34e0cf26f904d5
+  GamePluginBase: ba1c02434b0bca5f27782944ddb6dd4c304cd9fd
+  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
+
+COCOAPODS: 0.39.0
