@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AdvertiseAdmob"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "AdvertiseAdmob."
 
 # This description is used to generate tags and improve search results.
@@ -43,5 +43,5 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'AdSupport', 'AudioToolbox', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreTelephony', 'EventKit', 'EventKitUI', 'MessageUI', 'StoreKit', 'SystemConfiguration'
   s.vendored_frameworks = 'Pod/SDK/v752/GoogleMobileAdsSdkiOS-7.5.2/GoogleMobileAds.framework'
-
+  s.pod_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
 end

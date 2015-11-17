@@ -1,3 +1,4 @@
+CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/../../Pod/SDK/v752/GoogleMobileAdsSdkiOS-7.5.2"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/AdvertiseAdmob" "${PODS_ROOT}/Headers/Public"
