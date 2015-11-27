@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '66B8307D1FD032B4D0804AB1'
+               BlueprintIdentifier = '4EF442F6B59A1981E43BEF4F'
                BlueprintName = 'AdvertiseAdmob'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AdvertiseAdmob.framework'>

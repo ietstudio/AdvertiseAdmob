@@ -30,7 +30,7 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 
 - (BOOL)showSpotAd:(void (^)(BOOL))func {
     if ([_interstitial isReady]) {
-        UIViewController* controller = [[SystemUtil getInstance] getCurrentViewController];
+        UIViewController* controller = [[SystemUtil getInstance] controller];
         [_interstitial presentFromRootViewController:controller];
         [self createAndLoadInterstitial];
         [AMAdvertiseDelegate getInstance]->_spotFunc = func;
