@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3705A6A23D08F5FDC0206F6C /* Pods_AdvertiseAdmob_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7122D0B24AA1486B84A6BAB4 /* Pods_AdvertiseAdmob_Tests.framework */; };
+		0CA1A44165D5430B54CF7175 /* libPods-AdvertiseAdmob_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29C5647975F37973C6DD41B9 /* libPods-AdvertiseAdmob_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -22,7 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		F4B2B8977E7C9B1CA5D36403 /* Pods_AdvertiseAdmob_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F291E3FC1078294178BA02 /* Pods_AdvertiseAdmob_Example.framework */; };
+		DDCB8C7B531364BE6CD4A6A6 /* libPods-AdvertiseAdmob_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F86262B5F4061B330BF136E /* libPods-AdvertiseAdmob_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,9 @@
 
 /* Begin PBXFileReference section */
 		0FCE630CAF403F4D0B768708 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		29C5647975F37973C6DD41B9 /* libPods-AdvertiseAdmob_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvertiseAdmob_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D06CB0925BC4EC945429B46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2F86262B5F4061B330BF136E /* libPods-AdvertiseAdmob_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdvertiseAdmob_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E72DA2551D7551838B47AD /* Pods-AdvertiseAdmob_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvertiseAdmob_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvertiseAdmob_Example/Pods-AdvertiseAdmob_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* AdvertiseAdmob_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdvertiseAdmob_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,9 +60,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		62F291E3FC1078294178BA02 /* Pods_AdvertiseAdmob_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvertiseAdmob_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EAC888C6210D25969EE4EF0 /* Pods-AdvertiseAdmob_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvertiseAdmob_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AdvertiseAdmob_Example/Pods-AdvertiseAdmob_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7122D0B24AA1486B84A6BAB4 /* Pods_AdvertiseAdmob_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdvertiseAdmob_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		91D93A2C85994CE9701F63C6 /* AdvertiseAdmob.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AdvertiseAdmob.podspec; path = ../AdvertiseAdmob.podspec; sourceTree = "<group>"; };
 		CE45A3437ECD5B21C7B8CCAA /* Pods-AdvertiseAdmob_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdvertiseAdmob_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdvertiseAdmob_Tests/Pods-AdvertiseAdmob_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				F4B2B8977E7C9B1CA5D36403 /* Pods_AdvertiseAdmob_Example.framework in Frameworks */,
+				0CA1A44165D5430B54CF7175 /* libPods-AdvertiseAdmob_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				3705A6A23D08F5FDC0206F6C /* Pods_AdvertiseAdmob_Tests.framework in Frameworks */,
+				DDCB8C7B531364BE6CD4A6A6 /* libPods-AdvertiseAdmob_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				62F291E3FC1078294178BA02 /* Pods_AdvertiseAdmob_Example.framework */,
-				7122D0B24AA1486B84A6BAB4 /* Pods_AdvertiseAdmob_Tests.framework */,
+				29C5647975F37973C6DD41B9 /* libPods-AdvertiseAdmob_Example.a */,
+				2F86262B5F4061B330BF136E /* libPods-AdvertiseAdmob_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -516,6 +516,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AdvertiseAdmob/AdvertiseAdmob-Prefix.pch";
 				INFOPLIST_FILE = "AdvertiseAdmob/AdvertiseAdmob-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +533,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AdvertiseAdmob/AdvertiseAdmob-Prefix.pch";
 				INFOPLIST_FILE = "AdvertiseAdmob/AdvertiseAdmob-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

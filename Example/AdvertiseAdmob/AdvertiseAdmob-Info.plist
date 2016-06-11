@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>IETConfigs</key>
+	<dict>
+		<key>Admob_BannerId</key>
+		<string>ca-app-pub-8616016493142890/3081238163</string>
+		<key>Admob_SpotId</key>
+		<string>ca-app-pub-8616016493142890/7159051767</string>
+		<key>Admob_VedioId</key>
+		<string>ca-app-pub-8616016493142890/8193271766</string>
+		<key>Admob_TestDevice</key>
+		<string></string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
