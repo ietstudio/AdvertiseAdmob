@@ -1,5 +1,5 @@
 PODS:
-  - AdvertiseAdmob (0.1.3):
+  - AdvertiseAdmob (0.1.4):
     - Firebase/AdMob
     - Firebase/Core
     - GamePluginBase
@@ -49,10 +49,10 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   AdvertiseAdmob:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  AdvertiseAdmob: 1fab1dd135302ca47ec7ae32b07f736e10b27449
+  AdvertiseAdmob: 241b60b8108a16ab06f5dee1e3d032b546b8bb05
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Firebase: 6c80ac28d59d06bfd9152a7b6ea17625ca93183d
   FirebaseAnalytics: 6f75b04e6bfb8e0b6e9ef298e04c24eea3b13863
@@ -67,4 +67,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: d89423a13ca9ddeb57674f1306802eb9b27c694e
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.0.0

@@ -200,12 +200,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "AdvertiseAdmob_Example" */;
 			buildPhases = (
+				A7B6FA2EC095E8B0E8A9CCD2 /* 📦 Check Pods Manifest.lock */,
 				870DBC56B618E0CB5A9BC666 /* [CP] Check Pods Manifest.lock */,
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				F3D19CDACDB15CA79E9EB726 /* [CP] Embed Pods Frameworks */,
 				3955732427013522FC229177 /* [CP] Copy Pods Resources */,
+				60A6472F40B163443A2E27D3 /* 📦 Embed Pods Frameworks */,
+				468257D4994EBE570F2FC4D1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +223,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "AdvertiseAdmob_Tests" */;
 			buildPhases = (
+				507D65B03B9B096453593467 /* 📦 Check Pods Manifest.lock */,
 				779B5E9A4309F8A446EEBFCC /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				F53C63C1D3C8B9C678F1DB8D /* [CP] Embed Pods Frameworks */,
 				81229FDC8FC498951C400AFF /* [CP] Copy Pods Resources */,
+				F0DF48763E2D5A8CFE217596 /* 📦 Embed Pods Frameworks */,
+				B54735AC4FF1331E33D3A057 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,6 +314,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvertiseAdmob_Example/Pods-AdvertiseAdmob_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		468257D4994EBE570F2FC4D1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvertiseAdmob_Example/Pods-AdvertiseAdmob_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		507D65B03B9B096453593467 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		60A6472F40B163443A2E27D3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvertiseAdmob_Example/Pods-AdvertiseAdmob_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		779B5E9A4309F8A446EEBFCC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,6 +402,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B6FA2EC095E8B0E8A9CCD2 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B54735AC4FF1331E33D3A057 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvertiseAdmob_Tests/Pods-AdvertiseAdmob_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0DF48763E2D5A8CFE217596 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AdvertiseAdmob_Tests/Pods-AdvertiseAdmob_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F3D19CDACDB15CA79E9EB726 /* [CP] Embed Pods Frameworks */ = {

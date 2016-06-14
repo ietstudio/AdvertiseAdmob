@@ -23,7 +23,6 @@
     NSString* _admobTestDevice;
     GADInterstitial* _interstitial;
     GADBannerView* _bannerView;
-    //
     void(^_spotFunc)(BOOL);
     BOOL spotTouched;
     void(^_viewFunc)(BOOL);
@@ -91,7 +90,7 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     return _bannerView.adSize.size.height;
 }
 
-- (void)hideBanner {
+- (void)hideBannerAd {
     _bannerView.hidden = YES;
 }
 
@@ -128,11 +127,8 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 #pragma mark - GADInterstitialDelegate
 
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"interstitial:didFailToReceiveAdWithError");
-    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10*NSEC_PER_SEC));
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        [self preloadSpotAd];
-    });
+//    NSLog(@"interstitial:didFailToReceiveAdWithError: %@", error);
+    [self preloadSpotAd];
 }
 
 - (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
@@ -147,36 +143,35 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 #pragma mark - GADRewardBasedVideoAdDelegate
 
 - (void)rewardBasedVideoAdDidReceiveAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"rewardBasedVideoAdDidReceiveAd");
+//    NSLog(@"rewardBasedVideoAdDidReceiveAd");
 }
 
 - (void)rewardBasedVideoAdDidOpen:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"rewardBasedVideoAdDidOpen");
+//    NSLog(@"rewardBasedVideoAdDidOpen");
 }
 
 - (void)rewardBasedVideoAdDidStartPlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"rewardBasedVideoAdDidStartPlaying");
+//    NSLog(@"rewardBasedVideoAdDidStartPlaying");
 }
 
 - (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"rewardBasedVideoAdDidClose");
+//    NSLog(@"rewardBasedVideoAdDidClose");
     [self preloadVedioAd];
 }
 
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"rewardBasedVideoAdWillLeaveApplication");
+//    NSLog(@"rewardBasedVideoAdWillLeaveApplication");
     
 }
 
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
    didRewardUserWithReward:(GADAdReward *)reward {
-    NSLog(@"rewardBasedVideoAd:didRewardUserWithReward %@:%@", reward.type, reward.amount);
-    
+//    NSLog(@"rewardBasedVideoAd:didRewardUserWithReward %@:%@", reward.type, reward.amount);
 }
 
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
     didFailToLoadwithError:(NSError *)error {
-    NSLog(@"rewardBasedVideoAd:didFailToLoadwithError:");
+//    NSLog(@"rewardBasedVideoAd:didFailToLoadwithError: %@", error);
     [self preloadVedioAd];
 }
 
