@@ -4,6 +4,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'AdvertiseAdmob_Example' do
   pod 'AdvertiseAdmob', :path => '../'
+  pod 'AdvertiseAdmob/AdapterUnityAds', :path => '../'
+  pod 'AdvertiseAdmob/AdapterChartBoost', :path => '../'
+  pod 'AdvertiseAdmob/AdapterAdcolony', :path => '../'
+  pod 'AdvertiseAdmob/AdapterVungle', :path => '../'
+  pod 'AdvertiseAdmob/AdapterInmobi', :path => '../'
   target 'AdvertiseAdmob_Tests' do
     inherit! :search_paths
 
