@@ -1,0 +1,11 @@
+===============================================
+Unity Mediation Adapter for Google Mobile Ads
+===============================================
+
+Version 1.0.1
+
+- Fixed bug where the rewardBasedVideoAdDidOpen: callback wasn’t getting called.
+
+Version 1.0.0
+
+- Supports interstitial and reward-based video ads.

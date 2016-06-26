@@ -10,11 +10,11 @@
 	<key>IETConfigs</key>
 	<dict>
 		<key>Admob_BannerId</key>
-		<string>ca-app-pub-8616016493142890/3081238163</string>
+		<string>ca-app-pub-8616016493142890/2472652160</string>
 		<key>Admob_SpotId</key>
-		<string>ca-app-pub-8616016493142890/7159051767</string>
+		<string>ca-app-pub-8616016493142890/9103160968</string>
 		<key>Admob_VedioId</key>
-		<string>ca-app-pub-8616016493142890/8193271766</string>
+		<string>ca-app-pub-8616016493142890/2612252967</string>
 		<key>Admob_TestDevice</key>
 		<string></string>
 	</dict>
