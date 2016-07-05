@@ -129,7 +129,10 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
     NSLog(@"interstitial:didFailToReceiveAdWithError: %@", error);
-    [self preloadSpotAd];
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 5*NSEC_PER_SEC);
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        [self preloadSpotAd];
+    });
 }
 
 - (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
@@ -173,7 +176,10 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 - (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
     didFailToLoadwithError:(NSError *)error {
     NSLog(@"rewardBasedVideoAd:didFailToLoadwithError: %@", error);
-    [self preloadVedioAd];
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 5*NSEC_PER_SEC);
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        [self preloadVedioAd];
+    });
 }
 
 @end
