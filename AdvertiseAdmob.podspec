@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AdvertiseAdmob'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'AdvertiseAdmob'
   s.description      = <<-DESC
 AdvertiseAdmob.
@@ -27,31 +27,32 @@ AdvertiseAdmob.
   end
   s.subspec 'AdapterUnityAds' do |aua|
     aua.dependency 'AdvertiseAdmob/Core'
-    aua.dependency 'AdvertiseUnityAds'
   	aua.vendored_libraries = 'AdvertiseAdmob/Mediation/LibAdapterUnity-1.0.1/libAdapterUnity.a'
+    aua.frameworks = 'AVFoundation', 'CoreMedia', 'SystemConfiguration'
+  	aua.dependency 'UnityAds', '~> 1.5.6'
   end
   s.subspec 'AdapterChartBoost' do |acb|
     acb.dependency 'AdvertiseAdmob/Core'
-  	acb.dependency 'AdvertiseChartBoost'
   	acb.source_files = 'AdvertiseAdmob/Mediation/LibAdapterChartboost-1.1.0/*'
   	acb.vendored_libraries = 'AdvertiseAdmob/Mediation/LibAdapterChartboost-1.1.0/libAdapterChartboostAds.a'
+  	acb.dependency 'ChartboostSDK', '~> 6.4.4'
   end
   s.subspec 'AdapterAdcolony' do |aac|
     aac.dependency 'AdvertiseAdmob/Core'
-  	aac.dependency 'AdvertiseAdcolony'
   	aac.source_files = 'AdvertiseAdmob/Mediation/AdColonyAdapter1.5/*.h'
   	aac.vendored_libraries = 'AdvertiseAdmob/Mediation/AdColonyAdapter1.5/libAdapterSDKAdColony.a'
+  	aac.dependency 'AdColony', '~> 2.6.1'
   end
   s.subspec 'AdapterVungle' do |avg|
     avg.dependency 'AdvertiseAdmob/Core'
-  	avg.dependency 'AdvertiseVungle'
   	avg.vendored_libraries = 'AdvertiseAdmob/Mediation/VungleAdMobiOS-1.2.0/libVungleAdapter.a'
+  	avg.dependency 'VungleSDK-iOS', '~> 3.2.0.1'
   end
   s.subspec 'AdapterInmobi' do |aim|
     aim.dependency 'AdvertiseAdmob/Core'
-    aim.dependency 'AdvertiseInmobi'
     aim.vendored_libraries = 'AdvertiseAdmob/Mediation/AdMobMediation_Adapter_InMobi_iOS_531/libAdapterInMobi.a'
     aim.source_files = 'AdvertiseAdmob/Mediation/AdMobMediation_Adapter_InMobi_iOS_531/*.h'
+    aim.dependency 'InMobiSDK', '~> 5.3.1'
   end
 end
 
