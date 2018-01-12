@@ -515,7 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AdvertiseAdmob/AdvertiseAdmob-Prefix.pch";
 				INFOPLIST_FILE = "AdvertiseAdmob/AdvertiseAdmob-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cardgamefree.blackjack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,7 +534,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AdvertiseAdmob/AdvertiseAdmob-Prefix.pch";
 				INFOPLIST_FILE = "AdvertiseAdmob/AdvertiseAdmob-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cardgamefree.blackjack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
