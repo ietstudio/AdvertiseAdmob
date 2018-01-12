@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AdvertiseAdmob'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'AdvertiseAdmob'
   s.description      = <<-DESC
 AdvertiseAdmob.
@@ -17,7 +17,7 @@ AdvertiseAdmob.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gaoyang' => 'gaoyang@joycastle.mobi' }
   s.source           = { :git => 'https://github.com/ietstudio/AdvertiseAdmob.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '7.0'
+  s.ios.deployment_target = '8.0'
   s.default_subspecs = 'Core'
   s.subspec 'Core' do |cs|
   	cs.source_files = 'AdvertiseAdmob/Classes/**/*'
