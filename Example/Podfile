@@ -5,7 +5,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'AdvertiseAdmob_Example' do
   platform :ios, '8.0'
   pod 'AdvertiseAdmob', :path => '../'
-  pod 'AdvertiseAdmob/AdapterUnityAds', :path => '../'
   pod 'AdvertiseAdmob/AdapterChartBoost', :path => '../'
   pod 'AdvertiseAdmob/AdapterVungle', :path => '../'
   pod 'AdvertiseAdmob/AdapterInmobi', :path => '../'

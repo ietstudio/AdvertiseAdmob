@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AdvertiseAdmob'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'AdvertiseAdmob'
   s.description      = <<-DESC
 AdvertiseAdmob.
@@ -23,12 +23,6 @@ AdvertiseAdmob.
   	cs.source_files = 'AdvertiseAdmob/Classes/**/*'
   	cs.dependency 'GamePluginBase'
   	cs.dependency 'Google-Mobile-Ads-SDK'
-  end
-  s.subspec 'AdapterUnityAds' do |aua|
-    aua.dependency 'AdvertiseAdmob/Core'
-  	aua.vendored_libraries = 'AdvertiseAdmob/Mediation/LibAdapterUnity-1.0.1/libAdapterUnity.a'
-    aua.frameworks = 'AVFoundation', 'CoreMedia', 'SystemConfiguration'
-  	aua.dependency 'UnityAds', '~> 1.5.6'
   end
   s.subspec 'AdapterChartBoost' do |acb|
     acb.dependency 'AdvertiseAdmob/Core'
