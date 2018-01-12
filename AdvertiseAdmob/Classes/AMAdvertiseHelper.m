@@ -9,8 +9,6 @@
 #import "AMAdvertiseHelper.h"
 #import "IOSSystemUtil.h"
 
-#import <GoogleMobileAds/GoogleMobileAds.h>
-
 @interface AMAdvertiseHelper() <GADInterstitialDelegate, GADRewardBasedVideoAdDelegate>
 
 @end
@@ -21,12 +19,14 @@
     NSString* _admobBannerId;
     NSString* _admobVedioId;
     NSString* _admobTestDevice;
-    GADInterstitial* _interstitial;
     GADBannerView* _bannerView;
+    GADInterstitial* _interstitial;
     void(^_spotFunc)(BOOL);
-    BOOL spotTouched;
-    void(^_viewFunc)(BOOL);
-    void(^_clickFunc)(BOOL);
+    BOOL _spotTouched;
+    void(^_videoViewFunc)(BOOL);
+    void(^_videoClickFunc)(BOOL);
+    BOOL _videoViewed;
+    BOOL _videoClicked;
 }
 
 SINGLETON_DEFINITION(AMAdvertiseHelper)
@@ -36,15 +36,22 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     _interstitial.delegate = self;
     GADRequest* request = [GADRequest request];
     request.testDevices = @[_admobTestDevice];
+    // vungle
+    if (self.vungleExtras) {
+        [request registerAdNetworkExtras:self.vungleExtras];
+    }
     [_interstitial loadRequest:request];
 }
 
 - (void)preloadVedioAd {
+    [GADRewardBasedVideoAd sharedInstance].delegate = self;
     GADRequest* request = [GADRequest request];
     request.testDevices = @[_admobTestDevice];
-    [GADRewardBasedVideoAd sharedInstance].delegate = self;
-    [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
-                                           withAdUnitID:_admobVedioId];
+    // vungle
+    if (self.vungleExtras) {
+        [request registerAdNetworkExtras:self.vungleExtras];
+    }
+    [[GADRewardBasedVideoAd sharedInstance] loadRequest:request withAdUnitID:_admobVedioId];
 }
 
 #pragma mark - AdvertiseDelegate
@@ -55,10 +62,15 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     _admobSpotId     = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_SpotId];
     _admobVedioId    = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_VedioId];
     _admobTestDevice = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_TestDevice];
+    
+    // vungle init
+    [[NSClassFromString(@"VungleMediationHelper") getInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
     // preload spot ad
     if (_admobSpotId) {
         [self preloadSpotAd];
     }
+    
     // preload vedio ad
     if (_admobVedioId) {
         [self preloadVedioAd];
@@ -99,7 +111,7 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     if ([_interstitial isReady]) {
         UIViewController* controller = [[IOSSystemUtil getInstance] controller];
         [_interstitial presentFromRootViewController:controller];
-        spotTouched = NO;
+        _spotTouched = NO;
         _spotFunc = func;
         return YES;
     }
@@ -114,8 +126,10 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     if (![self isVedioAdReady]) {
         return NO;
     }
-    _viewFunc = viewFunc;
-    _clickFunc = clickFunc;
+    _videoViewed = NO;
+    _videoClicked = NO;
+    _videoViewFunc = viewFunc;
+    _videoClickFunc = clickFunc;
     UIViewController* controller = [IOSSystemUtil getInstance].controller;
     [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:controller];
     return YES;
@@ -136,11 +150,11 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 }
 
 - (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
-    spotTouched = YES;
+    _spotTouched = YES;
 }
 
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
-    _spotFunc(spotTouched);
+    _spotFunc(_spotTouched);
     [self preloadSpotAd];
 }
 
@@ -160,21 +174,22 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 
 - (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
     NSLog(@"rewardBasedVideoAdDidClose");
+    _videoViewFunc(_videoViewed);
+    _videoClickFunc(_videoClicked);
     [self preloadVedioAd];
 }
 
 - (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
     NSLog(@"rewardBasedVideoAdWillLeaveApplication");
-    
+    _videoClicked = YES;
 }
 
-- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
-   didRewardUserWithReward:(GADAdReward *)reward {
+- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd didRewardUserWithReward:(GADAdReward *)reward {
     NSLog(@"rewardBasedVideoAd:didRewardUserWithReward %@:%@", reward.type, reward.amount);
+    _videoViewed = YES;
 }
 
-- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
-    didFailToLoadwithError:(NSError *)error {
+- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd didFailToLoadwithError:(NSError *)error {
     NSLog(@"rewardBasedVideoAd:didFailToLoadwithError: %@", error);
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, ADVERTISE_RETRY_INTERVAL*NSEC_PER_SEC);
     dispatch_after(time, dispatch_get_main_queue(), ^{

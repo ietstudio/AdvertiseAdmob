@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 #import "AdvertiseDelegate.h"
 #import "Macros.h"
 
@@ -19,5 +20,7 @@
 @interface AMAdvertiseHelper : NSObject <AdvertiseDelegate>
 
 SINGLETON_DECLARE(AMAdvertiseHelper)
+
+@property (nonatomic, retain) id<GADAdNetworkExtras> vungleExtras;
 
 @end

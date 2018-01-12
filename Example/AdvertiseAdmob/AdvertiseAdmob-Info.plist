@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>IETConfigs</key>
-	<dict>
-		<key>Admob_BannerId</key>
-		<string>ca-app-pub-8616016493142890/2472652160</string>
-		<key>Admob_SpotId</key>
-		<string>ca-app-pub-8616016493142890/9103160968</string>
-		<key>Admob_VedioId</key>
-		<string>ca-app-pub-8616016493142890/2612252967</string>
-		<key>Admob_TestDevice</key>
-		<string></string>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -38,8 +22,30 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>IETConfigs</key>
+	<dict>
+		<key>Admob_BannerId</key>
+		<string>ca-app-pub-9274282740568260/5352356909</string>
+		<key>Admob_SpotId</key>
+		<string>ca-app-pub-9274282740568260/6829090107</string>
+		<key>Admob_VedioId</key>
+		<string>ca-app-pub-9274282740568260/9643760818</string>
+		<key>Admob_TestDevice</key>
+		<string></string>
+		<key>Vungle_AppId</key>
+		<string>5a587b3400f8275f7e0004dc</string>
+		<key>Vungle_SpotId</key>
+		<string>DEFAULT98364</string>
+		<key>Vungle_VedioId</key>
+		<string>REWARDE91320</string>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

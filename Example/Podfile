@@ -3,15 +3,11 @@ source 'https://github.com/CocoaPods/Specs.git'
 # use_frameworks!
 
 target 'AdvertiseAdmob_Example' do
+  platform :ios, '8.0'
   pod 'AdvertiseAdmob', :path => '../'
   pod 'AdvertiseAdmob/AdapterUnityAds', :path => '../'
   pod 'AdvertiseAdmob/AdapterChartBoost', :path => '../'
-  pod 'AdvertiseAdmob/AdapterAdcolony', :path => '../'
   pod 'AdvertiseAdmob/AdapterVungle', :path => '../'
   pod 'AdvertiseAdmob/AdapterInmobi', :path => '../'
-  target 'AdvertiseAdmob_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'AdvertiseAdmob/AdapterAppLovin', :path => '../'
 end
