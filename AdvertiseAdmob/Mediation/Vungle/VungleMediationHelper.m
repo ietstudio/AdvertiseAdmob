@@ -6,7 +6,7 @@
 //
 
 #import "VungleMediationHelper.h"
-#import <GoogleMobileAdsMediationVungle/VungleAdapter/VungleAdapter.h>
+#import <VungleAdapter/VungleAdapter.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <VungleSDK/VungleSDK.h>
 #import "IOSSystemUtil.h"
