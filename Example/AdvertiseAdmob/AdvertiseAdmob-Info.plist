@@ -24,12 +24,14 @@
 	<string>1.0</string>
 	<key>IETConfigs</key>
 	<dict>
+		<key>Admob_AppId</key>
+		<string>ca-app-pub-3940256099942544~1458002511</string>
 		<key>Admob_BannerId</key>
-		<string>ca-app-pub-9274282740568260/5352356909</string>
+		<string>ca-app-pub-3940256099942544/2934735716</string>
 		<key>Admob_SpotId</key>
-		<string>ca-app-pub-9274282740568260/6829090107</string>
+		<string>ca-app-pub-3940256099942544/4411468910</string>
 		<key>Admob_VedioId</key>
-		<string>ca-app-pub-9274282740568260/9643760818</string>
+		<string>ca-app-pub-3940256099942544/1712485313</string>
 		<key>Admob_TestDevice</key>
 		<string></string>
 		<key>Vungle_AppId</key>

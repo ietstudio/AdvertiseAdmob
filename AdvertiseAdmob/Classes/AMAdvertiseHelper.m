@@ -15,6 +15,7 @@
 
 @implementation AMAdvertiseHelper
 {
+    NSString* _admobAppId;
     NSString* _admobSpotId;
     NSString* _admobBannerId;
     NSString* _admobVedioId;
@@ -58,10 +59,13 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
+    _admobAppId      = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_AppId];
     _admobBannerId   = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_BannerId];
     _admobSpotId     = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_SpotId];
     _admobVedioId    = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_VedioId];
     _admobTestDevice = [[IOSSystemUtil getInstance] getConfigValueWithKey:Admob_TestDevice];
+
+    [GADMobileAds configureWithApplicationID:Admob_AppId];
     
     // vungle init
     [[NSClassFromString(@"VungleMediationHelper") getInstance] application:application didFinishLaunchingWithOptions:launchOptions];

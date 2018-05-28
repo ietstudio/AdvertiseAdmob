@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AdvertiseAdmob'
-  s.version          = '0.2.3'
+  s.version          = '0.2.4'
   s.summary          = 'AdvertiseAdmob'
   s.description      = <<-DESC
 AdvertiseAdmob.
@@ -22,24 +22,20 @@ AdvertiseAdmob.
   s.subspec 'Core' do |cs|
   	cs.source_files = 'AdvertiseAdmob/Classes/**/*'
   	cs.dependency 'GamePluginBase'
-  	cs.dependency 'Google-Mobile-Ads-SDK'
+  	cs.dependency 'Google-Mobile-Ads-SDK', '~> 7.31.0'
   end
   s.subspec 'AdapterChartBoost' do |acb|
     acb.dependency 'AdvertiseAdmob/Core'
-    acb.dependency 'GoogleMobileAdsMediationChartboost'
+    acb.dependency 'GoogleMobileAdsMediationChartboost', '~> 7.2.0.0'
   end
   s.subspec 'AdapterVungle' do |avg|
     avg.dependency 'AdvertiseAdmob/Core'
-  	avg.dependency 'GoogleMobileAdsMediationVungle', '~> 5.3.0.0'
+  	avg.dependency 'GoogleMobileAdsMediationVungle', '~> 6.2.0.2'
     avg.source_files = 'AdvertiseAdmob/Mediation/Vungle/**/*'
-  end
-  s.subspec 'AdapterInmobi' do |aim|
-    aim.dependency 'AdvertiseAdmob/Core'
-    aim.dependency 'GoogleMobileAdsMediationInMobi'
   end
   s.subspec 'AdapterAppLovin' do |aal|
     aal.dependency 'AdvertiseAdmob/Core'
-    aal.dependency 'GoogleMobileAdsMediationAppLovin'
+    aal.dependency 'GoogleMobileAdsMediationAppLovin', '~> 5.0.1.0'
   end
 end
 

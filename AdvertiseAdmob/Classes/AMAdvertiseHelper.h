@@ -12,6 +12,7 @@
 #import "Macros.h"
 
 #define Admob_Name          @"Admob"
+#define Admob_AppId         @"Admob_AppId"
 #define Admob_BannerId      @"Admob_BannerId"
 #define Admob_SpotId        @"Admob_SpotId"
 #define Admob_VedioId       @"Admob_VedioId"
