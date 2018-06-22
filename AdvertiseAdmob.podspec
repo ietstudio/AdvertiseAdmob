@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AdvertiseAdmob'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'AdvertiseAdmob'
   s.description      = <<-DESC
 AdvertiseAdmob.
@@ -36,6 +36,10 @@ AdvertiseAdmob.
   s.subspec 'AdapterAppLovin' do |aal|
     aal.dependency 'AdvertiseAdmob/Core'
     aal.dependency 'GoogleMobileAdsMediationAppLovin', '~> 5.0.1.0'
+  end
+  s.subspec 'AdapterFacebook' do |afb|
+    afb.dependency 'AdvertiseAdmob/Core'
+    afb.dependency 'GoogleMobileAdsMediationFacebook', '~> 4.28.1.1'
   end
 end
 

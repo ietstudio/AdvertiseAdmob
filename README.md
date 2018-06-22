@@ -27,3 +27,7 @@ gaoyang, gaoyang@joycastle.mobi
 ## License
 
 AdvertiseAdmob is available under the MIT license. See the LICENSE file for more info.
+
+## TODO
+
+断开网络连接，再重新连上网络，不会发起视频广告请求

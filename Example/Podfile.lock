@@ -7,6 +7,9 @@ PODS:
   - AdvertiseAdmob/AdapterChartBoost (0.2.4):
     - AdvertiseAdmob/Core
     - GoogleMobileAdsMediationChartboost (~> 7.2.0.0)
+  - AdvertiseAdmob/AdapterFacebook (0.2.4):
+    - AdvertiseAdmob/Core
+    - GoogleMobileAdsMediationFacebook (~> 4.28.1.1)
   - AdvertiseAdmob/AdapterVungle (0.2.4):
     - AdvertiseAdmob/Core
     - GoogleMobileAdsMediationVungle (~> 6.2.0.2)
@@ -46,9 +49,10 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - ChartboostSDK (7.2.0)
+  - FBAudienceNetwork (4.28.1)
   - FCUUID (1.3.1):
     - UICKeyChainStore (~> 2.1.0)
-  - GamePluginBase (0.3.6):
+  - GamePluginBase (0.3.7):
     - AFNetworking (~> 3.1.0)
     - ALAssetsLibrary-CustomPhotoAlbum (~> 1.3.0)
     - BlocksKit (~> 2.2.5)
@@ -65,6 +69,9 @@ PODS:
   - GoogleMobileAdsMediationChartboost (7.2.0.0):
     - ChartboostSDK (= 7.2.0)
     - Google-Mobile-Ads-SDK (>= 7.10.1)
+  - GoogleMobileAdsMediationFacebook (4.28.1.1):
+    - FBAudienceNetwork (= 4.28.1)
+    - Google-Mobile-Ads-SDK (>= 7.12.0)
   - GoogleMobileAdsMediationVungle (6.2.0.2):
     - Google-Mobile-Ads-SDK (>= 7.14.0)
     - VungleSDK-iOS (= 6.2.0)
@@ -81,24 +88,50 @@ DEPENDENCIES:
   - AdvertiseAdmob (from `../`)
   - AdvertiseAdmob/AdapterAppLovin (from `../`)
   - AdvertiseAdmob/AdapterChartBoost (from `../`)
+  - AdvertiseAdmob/AdapterFacebook (from `../`)
   - AdvertiseAdmob/AdapterVungle (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - ALAssetsLibrary-CustomPhotoAlbum
+    - AppLovinSDK
+    - BlocksKit
+    - ChartboostSDK
+    - FBAudienceNetwork
+    - FCUUID
+    - Google-Mobile-Ads-SDK
+    - GoogleMobileAdsMediationAppLovin
+    - GoogleMobileAdsMediationChartboost
+    - GoogleMobileAdsMediationFacebook
+    - GoogleMobileAdsMediationVungle
+    - JailbrokenDetector
+    - MBProgressHUD
+    - NSLogger
+    - Reachability
+    - UICKeyChainStore
+    - VungleSDK-iOS
+  https://github.com/ietstudio/Specs.git:
+    - GamePluginBase
 
 EXTERNAL SOURCES:
   AdvertiseAdmob:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AdvertiseAdmob: 475474496a33603599224f5d1c502c077ca17ed4
+  AdvertiseAdmob: 01c2d70a9bdb1b7418ed9b4a59204d2b4cbd7bf5
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ALAssetsLibrary-CustomPhotoAlbum: 73ce379e8bef8bb6ff2f286cd98461422f869fae
   AppLovinSDK: 7876e331b1d29e82dcc1dd096fcf0a70bae3a431
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   ChartboostSDK: 15386cd16c8a5d07bb75432d0fafafd6134eedb1
+  FBAudienceNetwork: c0cda151bb2f7b55d1e045e59ebc81f3153989b2
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
-  GamePluginBase: d03f2e88f6407af99e363a5193f197a0ab1f3423
+  GamePluginBase: 62d79370d8609a47824b11f5f643f521807b57bb
   Google-Mobile-Ads-SDK: 6e529e748b45507a2ca904e0b5a52669ba3920c4
   GoogleMobileAdsMediationAppLovin: fa2e01a41ddc21be77031c2752b9eaafcf58c088
   GoogleMobileAdsMediationChartboost: abfc60b8cdd1f927f6ce99a18b83b6c1c026f8d8
+  GoogleMobileAdsMediationFacebook: c71b4f171bb156edc8152848f0f91f3a2dc5e613
   GoogleMobileAdsMediationVungle: 7ba17d75421f6096cd2377deb2060c9e3d637bc2
   JailbrokenDetector: 876cc32cf9ab41e249d44a5f2916a689137a4e33
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -107,6 +140,6 @@ SPEC CHECKSUMS:
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
   VungleSDK-iOS: a8665f4e826ad688135429f4618df4235f8738c7
 
-PODFILE CHECKSUM: 90c61f6f8680547d71d580f9efa17b8e1515b38e
+PODFILE CHECKSUM: 093a12c77320294ab6d2e84edadc63c87c07b522
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

@@ -8,4 +8,5 @@ target 'AdvertiseAdmob_Example' do
   pod 'AdvertiseAdmob/AdapterChartBoost', :path => '../'
   pod 'AdvertiseAdmob/AdapterVungle', :path => '../'
   pod 'AdvertiseAdmob/AdapterAppLovin', :path => '../'
+  pod 'AdvertiseAdmob/AdapterFacebook', :path=> '../'
 end
