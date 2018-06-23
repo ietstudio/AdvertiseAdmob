@@ -33,6 +33,8 @@
 SINGLETON_DEFINITION(AMAdvertiseHelper)
 
 - (void)preloadSpotAd {
+    if ([self isSpotAdReady])
+        return;
     _interstitial = [[GADInterstitial alloc] initWithAdUnitID:_admobSpotId];
     _interstitial.delegate = self;
     GADRequest* request = [GADRequest request];
@@ -45,6 +47,8 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
 }
 
 - (void)preloadVedioAd {
+    if ([self isVedioAdReady])
+        return;
     [GADRewardBasedVideoAd sharedInstance].delegate = self;
     GADRequest* request = [GADRequest request];
     request.testDevices = @[_admobTestDevice];
@@ -79,6 +83,8 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     if (_admobVedioId) {
         [self preloadVedioAd];
     }
+    [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(preloadVedioAd) userInfo:nil repeats:YES];
+    
     return YES;
 }
 
@@ -111,8 +117,12 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     _bannerView.hidden = YES;
 }
 
+- (BOOL)isSpotAdReady {
+    return [_interstitial isReady];
+}
+
 - (BOOL)showSpotAd:(void (^)(BOOL))func {
-    if ([_interstitial isReady]) {
+    if ([self isSpotAdReady]) {
         UIViewController* controller = [[IOSSystemUtil getInstance] controller];
         [_interstitial presentFromRootViewController:controller];
         _spotTouched = NO;
