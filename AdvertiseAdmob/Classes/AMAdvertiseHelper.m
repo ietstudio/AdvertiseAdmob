@@ -83,7 +83,6 @@ SINGLETON_DEFINITION(AMAdvertiseHelper)
     if (_admobVedioId) {
         [self preloadVedioAd];
     }
-    [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(preloadVedioAd) userInfo:nil repeats:YES];
     
     return YES;
 }
